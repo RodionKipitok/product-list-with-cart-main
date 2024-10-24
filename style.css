@@ -1,0 +1,82 @@
+@font-face {
+   font-family: 'Red Hat Text';
+   src: url('./assets/fonts/static/RedHatText-Regular.ttf') format('ttf');
+   font-weight: 400;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Red Hat Text';
+   src: url('./assets/fonts/static/RedHatText-Bold.ttf') format('ttf');
+   font-weight: 700;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Red Hat Text';
+   src: url('./assets/fonts/static/RedHatText-SemiBold.ttf') format('ttf');
+   font-weight: 600; /* SemiBold обычно имеет вес 600 */
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Red Hat Text';
+   src: url('./assets/fonts/RedHatText-Italic-VariableFont_wght.ttf')
+      format('ttf');
+   font-weight: 100 900;
+   font-style: normal;
+   font-display: swap;
+}
+@font-face {
+   font-family: 'Red Hat Text';
+   src: url('./assets/fonts/RedHatText-VariableFont_wght.ttf') format('ttf');
+   font-weight: 100 900;
+   font-style: normal;
+   font-display: swap;
+}
+.container {
+    padding: 0 15px;
+  }
+  
+
+.container-img {
+   display: flex;
+   width: 200px;
+   overflow: hidden;
+}
+
+.container-img img {
+   width: 200px;
+}
+
+.list li {
+   list-style: none;
+}
+
+
+@media (min-width: 575.98px){
+    .container {
+      max-width: 540px;
+      margin: auto;
+      padding: 0;
+    }
+  }
+  
+  @media (min-width: 767.98px){
+    .container {
+      max-width: 720px;	
+    }
+  }
+  
+  @media (min-width: 991.98px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1199.98px){
+    .container {
+      max-width: 1140px;
+    }
+  }
