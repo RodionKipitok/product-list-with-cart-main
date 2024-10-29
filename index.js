@@ -45,12 +45,14 @@ function renderDesserts(data = []) {
                   <p class="card_price">${item.price}</p>
                </div>
             `;
+      const button = productCard.querySelector('.card_btn-order');
+      button.addEventListener('click', () => {
+         addToCart(item.name);
+      });
       list.appendChild(productCard);
    });
 }
 
-
-
-function addToCart(params) {
-   
+function addToCart(name) {
+   console.log(name);
 }

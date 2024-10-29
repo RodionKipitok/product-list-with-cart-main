@@ -88,8 +88,6 @@ body {
 
 .card_btn-order:hover {
    transform: translate(-50%, 90px) scale(0.9);
-   color: blue;
-   background-color: azure;
 }
 
 .card_btn-order::before {
