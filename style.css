@@ -36,6 +36,12 @@
    font-display: swap;
 }
 
+body {
+   font-family: 'Red Hat Text', sans-serif;
+   font-size: 16px;
+   background-color: hsl(20, 50%, 98%);
+}
+
 * {
    padding: 0;
    margin: 0;
@@ -46,6 +52,10 @@
    padding: 0 15px;
 }
 
+.title {
+   margin: 20px 0;
+}
+
 .card_container-img {
    display: flex;
    width: 100%;
@@ -53,7 +63,7 @@
    border-radius: 10px;
 }
 
-.container-img img {
+.img-desserts {
    width: 100%;
 }
 
@@ -61,15 +71,59 @@
    list-style: none;
 }
 
-
-
 .card_btn-order {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, 90px);
+   width: 200px;
+   height: 40px;
+   padding-left: 20px;
+   border-radius: 50px;
+   border: 1px solid hsl(7, 20%, 60%);
+   background-color: #fff;
+   font-size: 16px;
+   font-weight: 800;
 }
+
+.card_btn-order:hover {
+   transform: translate(-50%, 90px) scale(0.9);
+   color: blue;
+   background-color: azure;
+}
+
+.card_btn-order::before {
+   content: '';
+   display: inline-block;
+   position: absolute;
+   left: 29px;
+   width: 20px;
+   height: 20px;
+   background-image: url(./assets/images/icon-add-to-cart.svg);
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.wrapper-position-btn-order {
+   position: relative;
+}
+
+.wrapper-text {
+   margin: 15px 0;
+   padding: 15px 0;
+}
+
 .card_category {
+   color: rgb(163, 165, 167);
+   margin: 5px;
 }
 .card_name {
+   font-size: 22px;
+   margin: 5px;
 }
 .card_price {
+   font-size: 20px;
+   margin: 5px;
 }
 
 @media (min-width: 575.98px) {

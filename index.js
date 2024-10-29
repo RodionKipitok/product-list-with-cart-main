@@ -1,3 +1,7 @@
+const list = document.querySelector('.list');
+
+// get date
+
 fetch('./data.json')
    .then(response => {
       if (!response.ok) {
@@ -7,7 +11,46 @@ fetch('./data.json')
       return response.json();
    })
    .then(data => {
+      renderDesserts(data);
       console.log(data);
-   }).catch( error => {
-       console.error('Ошибка загрузки JSON:', error);
+   })
+   .catch(error => {
+      console.error('Ошибка загрузки JSON:', error);
    });
+
+// render Desserts
+
+function renderDesserts(data = []) {
+   data.forEach(item => {
+      const productCard = document.createElement('li');
+      productCard.classList = 'card';
+
+      productCard.innerHTML = `    
+               <div class="wrapper-position-btn-order">
+                  <div class="card_container-img">
+                     <img
+                        class="img-desserts"
+                        src="/assets/images/image-baklava-mobile.jpg"
+                        alt=${item.name}
+                        srcset=""
+                     />
+                  </div>
+                  <button type="button" class="card_btn-order">
+                     Add to cart
+                  </button>
+               </div>
+               <div class="wrapper-text">
+                  <p class="card_category">${item.category}</p>
+                  <h4 class="card_name">${item.name}</h4>
+                  <p class="card_price">${item.price}</p>
+               </div>
+            `;
+      list.appendChild(productCard);
+   });
+}
+
+
+
+function addToCart(params) {
+   
+}
