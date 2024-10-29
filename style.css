@@ -124,6 +124,29 @@ body {
    margin: 5px;
 }
 
+/* Cart */
+
+.cart {
+   width: 100%;
+   height: 400px;
+   background-color: #fff;
+   margin-bottom: 15px;
+   background-image: url(/assets/images/illustration-empty-cart.svg);
+   background-repeat: no-repeat;
+   background-position: center;
+}
+.cart h4 {
+   font-size: 30px;
+   padding: 25px 28px;
+   color: hsl(27, 91%, 64%);
+}
+
+.cart p {
+   margin-top: 200px;
+   padding: 28px 45px;
+   color: hsl(12, 20%, 44%);
+}
+
 @media (min-width: 575.98px) {
    .container {
       max-width: 540px;
