@@ -1,4 +1,4 @@
-const list = document.querySelector('.list');
+const main = document.querySelector('.main');
 
 // get date
 
@@ -22,7 +22,7 @@ fetch('./data.json')
 
 function renderDesserts(data = []) {
    data.forEach(item => {
-      const productCard = document.createElement('li');
+      const productCard = document.createElement('div');
       productCard.classList = 'card';
 
       productCard.innerHTML = `    
@@ -30,7 +30,7 @@ function renderDesserts(data = []) {
                   <div class="card_container-img">
                      <img
                         class="img-desserts"
-                        src="/assets/images/image-baklava-mobile.jpg"
+                        src=${item.image.desktop}
                         alt=${item.name}
                         srcset=""
                      />
@@ -49,7 +49,7 @@ function renderDesserts(data = []) {
       button.addEventListener('click', () => {
          addToCart(item.name);
       });
-      list.appendChild(productCard);
+      main.appendChild(productCard);
    });
 }
 
